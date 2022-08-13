@@ -1,9 +1,18 @@
+import { Routes, Route } from 'react-router-dom';
+import Genre from './routes/genre.componet';
+import SingleP from './routes/sinleP.componet';
+import Nav from './routes/nav/nav.componet';
+
 
 function App() {
   return (
-    <div >
-     <h1>HELO REACT!</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Nav />}>
+        <Route path='play' element={<Genre />}>
+          <Route path='single' element={<SingleP />}/>
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 
