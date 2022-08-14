@@ -1,13 +1,14 @@
 import { Fragment } from 'react';
-import {Outlet } from 'react-router-dom';
+import {Link, Outlet } from 'react-router-dom';
 
 function Nav() {
     return (
        < Fragment >
       <div >
-      The navigations 
+      The information about feta 
+      <Link to='/play'> play</Link>
       </div>
-      <Outlet />
+      {/* <Outlet /> */}
       </Fragment > )
   }
 
